@@ -15,7 +15,7 @@ import java.io.Serializable;
  * @version $Id AccountInfo.java, v 0.1 2017-02-06 10:28 cwenao Exp $$
  */
 
-@Document(indexName = "cwenao",type = "accountinfo", shards = 1,replicas = 0, refreshInterval = "-1")
+@Document(indexName = "goods",type = "Goods", shards = 1,replicas = 0, refreshInterval = "-1")
 public class AccountInfo implements Serializable{
 
 
