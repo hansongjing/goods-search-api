@@ -20,8 +20,8 @@ import java.net.InetAddress;
  * Created by hanhansongjiang on 17/4/28.
  */
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "com.goodsSearch.mapper")
 @EnableConfigurationProperties(ElasticsearchProperties.class)
+@EnableElasticsearchRepositories(basePackages = "com.goodsSearch.mapper")
 public class EsConfig {
 
     @Autowired

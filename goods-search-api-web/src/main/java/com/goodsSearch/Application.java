@@ -2,11 +2,12 @@ package com.goodsSearch;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration;
 
 /**
  * Created by hanhansongjiang on 17/4/27.
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = {ElasticsearchAutoConfiguration.class})
 public class Application {
 
 
