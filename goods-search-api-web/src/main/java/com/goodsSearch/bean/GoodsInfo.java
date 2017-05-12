@@ -8,6 +8,8 @@ import com.goodsSearch.bean.cat.Stock;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldIndex;
 
 import java.util.Date;
 import java.util.List;
@@ -19,7 +21,7 @@ import java.util.List;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Document(indexName = "shop", type = "Product", shards = 1, replicas = 0, refreshInterval = "-1")
+@Document(indexName = "shopGoods", type = "Product", shards = 1, replicas = 0, refreshInterval = "-1")
 public class GoodsInfo {
 
 
@@ -36,6 +38,8 @@ public class GoodsInfo {
 
     private String barCode;
 
+
+   @Field(index = FieldIndex.not_analyzed)
     private String brand;
 
 

@@ -46,7 +46,9 @@ public class SearchForm {
     //4 排序字段
 
 
-    private  String order;//排序规则,使用,号分割
+    private  String sortField;//排序字段
+
+    private String  sort;  //排序方式: 升须,降序
 
 
     //5是否包括聚合
