@@ -29,6 +29,12 @@ public class CacheInterceptor {
      * 而且我们可以看出此表达式基于 annotation。
      * 并且用于内建属性为查询的方法之上
      */
+
+    @Pointcut("execution(* com.goodsSearch.service.UserService.*(..))" +
+            " && @annotation(com.goodsSearch.cache.annotation.RedisEvict)")
+    public void pointcutLock() {}
+
+
     @Pointcut("@annotation(com.goodsSearch.cache.annotation.RedisCache)&& execution(* *(..))")
     public void redisCacheAspect() {
     }
@@ -44,7 +50,7 @@ public class CacheInterceptor {
 
 
 
-    @Around("redisCacheEvict()")
+    @Around("pointcutLock()")
     public Object doBefore(ProceedingJoinPoint jp) throws Throwable {
 
         Method method = ((MethodSignature) jp.getSignature()).getMethod();
