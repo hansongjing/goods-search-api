@@ -23,7 +23,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <lombok.version>1.16.10_qianmi-1.0.2</lombok.version>
+      <lombok.version>1.16.4</lombok.version>
       <spring-data-redis.version>1.7.4.RELEASE</spring-data-redis.version>
       <mysql-connector.version>5.1.40</mysql-connector.version>
   </properties>
@@ -56,7 +56,7 @@
       <dependency>
           <groupId>org.projectlombok</groupId>
           <artifactId>lombok</artifactId>
-          <version>1.16.4</version>
+          <version>${lombok.version}</version>
       </dependency>
 
 

@@ -47,6 +47,9 @@ public class RedisUtil<T> {
     }
 
 
+
+    public boolean isExist(String key){ return redisTemplate.opsForValue().get(key)==null;}
+
 }
 
 

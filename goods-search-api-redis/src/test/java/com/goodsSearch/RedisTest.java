@@ -45,6 +45,15 @@ public class RedisTest extends BaseTest {
     }
 
 
+    @Test
+    public void select(){
+
+        for(int i=0;i<10;i++) {
+            userService.findUserById("10");
+        }
+    }
+
+
 
 
 }
