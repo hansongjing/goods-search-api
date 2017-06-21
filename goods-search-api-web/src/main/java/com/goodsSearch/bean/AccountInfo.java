@@ -4,6 +4,7 @@
  */
 package com.goodsSearch.bean;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
@@ -14,7 +15,7 @@ import java.io.Serializable;
  * @author cwenao
  * @version $Id AccountInfo.java, v 0.1 2017-02-06 10:28 cwenao Exp $$
  */
-
+@Data
 @Document(indexName = "goods",type = "Goods", shards = 1,replicas = 0, refreshInterval = "-1")
 public class AccountInfo implements Serializable{
 

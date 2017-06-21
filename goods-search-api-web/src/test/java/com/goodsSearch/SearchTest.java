@@ -1,11 +1,8 @@
 package com.goodsSearch;
 
-import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.goodsSearch.bean.GoodsInfo;
 import com.goodsSearch.mapper.GoodsInfoRepository;
-import javafx.scene.input.DataFormat;
-import org.apache.commons.lang.time.DateUtils;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;
 import org.elasticsearch.index.query.*;
@@ -18,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -43,6 +39,8 @@ public class SearchTest {
 
     @Autowired
     private ElasticsearchTemplate esTemplate;
+
+
 
 
     @Test
